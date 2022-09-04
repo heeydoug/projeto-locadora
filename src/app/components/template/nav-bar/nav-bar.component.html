@@ -1,0 +1,82 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" opened
+              fixedInViewport="true" fixedTopGap=65>
+
+    <mat-nav-list class="nav-list">
+
+      <!-- Home -->
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">
+          home
+        </i>
+        Home
+      </a>
+
+      <!-- Atores -->
+      <a mat-list-item routerLink="/ator">
+        <i class="material-icons">
+          person_pin
+        </i>
+        Atores
+      </a>
+
+      <!-- Classes -->
+      <a mat-list-item routerLink="/classe">
+        <i class="material-icons">
+          class
+        </i>
+        Classes
+      </a>
+
+      <!-- Clientes -->
+      <a mat-list-item routerLink="">
+        <i class="material-icons">
+          person
+        </i>
+        Clientes
+      </a>
+
+      <!-- Diretores -->
+      <a mat-list-item routerLink="/diretor">
+        <i class="material-icons">
+          psychology
+        </i>
+        Diretores
+      </a>
+
+      <!-- Itens -->
+      <a mat-list-item routerLink="">
+        <i class="material-icons">
+          menu_book
+        </i>
+        Itens
+      </a>
+
+      <!-- Locações -->
+      <a mat-list-item routerLink="">
+        <i class="material-icons">
+          library_books
+        </i>
+        Locações
+      </a>
+
+      <!-- Títulos -->
+      <a mat-list-item routerLink="">
+        <i class="material-icons">
+          list_alt
+        </i>
+        Títulos
+      </a>
+
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content class="content">
+    <router-outlet></router-outlet>
+    <button type="button" (click)="drawer.toggle()">
+      <i class="material-icons" >
+        arrow_right_alt
+      </i>
+    </button>
+  </mat-drawer-content>
+</mat-drawer-container>
+
