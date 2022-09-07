@@ -1,1 +1,18 @@
-<p>editar-diretor works!</p>
+<div class="container-principal">
+  <mat-card class="card mat-elevation-z4">
+    <mat-card-title>Editar Diretor</mat-card-title>
+    <form>
+      <mat-form-field>
+        <input matInput placeholder="Nome">
+      </mat-form-field>
+    </form>
+
+    <button class="salvar" mat-raised-button (click)="editarDiretor()">
+      Salvar
+    </button>
+
+    <button class="cancelar" mat-raised-button (click)="cancelar()">
+      Cancelar
+    </button>
+  </mat-card>
+</div>

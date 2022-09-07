@@ -1,1 +1,10 @@
-<p>excluir-ator works!</p>
+<div mat-dialog-content>
+  <h1 class="title">Deseja realmente excluir este ator?</h1>
+</div>
+<div mat-dialog-actions>
+  <div class="center">
+    <button mat-raised-button class="botao-sim" (click)="excluirAtor()" cdkFocusInitial>Sim</button>
+    <button mat-raised-button class="botao-cancelar" (click)="cancelar()">Cancelar</button>
+  </div>
+
+</div>

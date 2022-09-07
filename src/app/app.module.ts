@@ -36,6 +36,9 @@ import { ExcluirDiretorComponent } from './components/diretor/excluir-diretor/ex
 import { LerDiretorComponent } from './components/diretor/ler-diretor/ler-diretor.component'
 import {MatSortModule} from "@angular/material/sort";
 import {MatTableModule} from "@angular/material/table";
+import {HttpClientModule} from "@angular/common/http";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
@@ -60,24 +63,27 @@ import {MatTableModule} from "@angular/material/table";
     ExcluirDiretorComponent,
     LerDiretorComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatListModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatSortModule,
-    MatTableModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatListModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatSortModule,
+        MatTableModule,
+        HttpClientModule,
+        MatProgressSpinnerModule,
+        MatDialogModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

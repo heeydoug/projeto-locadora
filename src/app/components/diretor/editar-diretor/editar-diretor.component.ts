@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-editar-diretor',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarDiretorComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
+  editarDiretor(): void{
+    this.router.navigate(['/diretor']);
+  }
+
+  cancelar(): void {
+    this.router.navigate(['/diretor']);
+  }
 }

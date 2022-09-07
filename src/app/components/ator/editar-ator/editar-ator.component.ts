@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-editar-ator',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarAtorComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router)
+  {
+
+  }
 
   ngOnInit(): void {
+  }
+
+  editarAtor(): void{
+    this.router.navigate(['/ator']);
+  }
+
+  cancelar(): void {
+    this.router.navigate(['/ator']);
   }
 
 }

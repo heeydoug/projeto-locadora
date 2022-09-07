@@ -7,6 +7,12 @@ import {CrudDiretorComponent} from "./views/crud-diretor/crud-diretor.component"
 import {CriarAtorComponent} from "./components/ator/criar-ator/criar-ator.component";
 import {CriarDiretorComponent} from "./components/diretor/criar-diretor/criar-diretor.component";
 import {CriarClasseComponent} from "./components/classe/criar-classe/criar-classe.component";
+import {EditarAtorComponent} from "./components/ator/editar-ator/editar-ator.component";
+import {ExcluirAtorComponent} from "./components/ator/excluir-ator/excluir-ator.component";
+import {ExcluirClasseComponent} from "./components/classe/excluir-classe/excluir-classe.component";
+import {EditarClasseComponent} from "./components/classe/editar-classe/editar-classe.component";
+import {EditarDiretorComponent} from "./components/diretor/editar-diretor/editar-diretor.component";
+import {ExcluirDiretorComponent} from "./components/diretor/excluir-diretor/excluir-diretor.component";
 
 const routes: Routes = [
   {
@@ -25,6 +31,16 @@ const routes: Routes = [
   },
 
   {
+    path: 'ator/editarAtor',
+    component: EditarAtorComponent
+  },
+
+  {
+    path: 'ator/excluirAtor',
+    component: ExcluirAtorComponent
+  },
+
+  {
     path: 'classe',
     component: CrudClasseComponent
   },
@@ -35,6 +51,16 @@ const routes: Routes = [
   },
 
   {
+    path: 'classe/editarClasse',
+    component: EditarClasseComponent
+  },
+
+  {
+    path: 'classe/excluirClasse',
+    component: ExcluirClasseComponent
+  },
+
+  {
     path: 'diretor',
     component: CrudDiretorComponent
   },
@@ -42,6 +68,16 @@ const routes: Routes = [
   {
     path: 'diretor/criarDiretor',
     component: CriarDiretorComponent
+  },
+
+  {
+    path: 'diretor/editarDiretor',
+    component: EditarDiretorComponent
+  },
+
+  {
+    path: 'diretor/excluirDiretor',
+    component: ExcluirDiretorComponent
   },
 
 ];
