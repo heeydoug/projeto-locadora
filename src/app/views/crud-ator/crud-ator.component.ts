@@ -15,7 +15,7 @@ export class CrudAtorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  irParaCriarAtor(): void{
+  adicionarAtor(): void{
     this.router.navigate(['/ator/criarAtor']);
   }
 

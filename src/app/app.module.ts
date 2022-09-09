@@ -20,7 +20,7 @@ import { CrudDiretorComponent } from './views/crud-diretor/crud-diretor.componen
 import { CriarAtorComponent } from './components/ator/criar-ator/criar-ator.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { CriarClasseComponent } from './components/classe/criar-classe/criar-classe.component';
 import { CriarDiretorComponent } from './components/diretor/criar-diretor/criar-diretor.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
@@ -39,6 +39,7 @@ import {MatTableModule} from "@angular/material/table";
 import {HttpClientModule} from "@angular/common/http";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatDialogModule} from "@angular/material/dialog";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 
 @NgModule({
@@ -82,7 +83,9 @@ import {MatDialogModule} from "@angular/material/dialog";
         MatTableModule,
         HttpClientModule,
         MatProgressSpinnerModule,
-        MatDialogModule
+        MatDialogModule,
+        ReactiveFormsModule,
+        MatSnackBarModule
     ],
   providers: [],
   bootstrap: [AppComponent]

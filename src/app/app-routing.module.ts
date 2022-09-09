@@ -31,7 +31,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'ator/editarAtor',
+    path: 'ator/editarAtor/:id',
     component: EditarAtorComponent
   },
 

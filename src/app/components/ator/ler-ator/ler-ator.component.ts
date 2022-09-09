@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Ator} from "../models/ator";
 import {AtorService} from "../services/ator.service";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Observable} from "rxjs";
 import {ExcluirAtorComponent} from "../excluir-ator/excluir-ator.component";
 import {MatDialog} from "@angular/material/dialog";
@@ -14,12 +14,13 @@ import {MatDialog} from "@angular/material/dialog";
 export class LerAtorComponent implements OnInit {
 
   atores: Observable<Ator[]>;
-  displayedColumns = ['nome', 'acoes'];
+  displayedColumns = ['id','nome', 'acoes'];
 
   constructor(
     private dialog: MatDialog,
     private atorService: AtorService,
-    private router: Router)
+    private router: Router,
+    private route: ActivatedRoute)
 
   {
     this.atores = this.atorService.list();
@@ -29,8 +30,8 @@ export class LerAtorComponent implements OnInit {
 
   }
 
-  editarAtor(){
-    this.router.navigate(['/ator/editarAtor'])
+  editarAtor(id: any){
+    this.router.navigate(['/ator/editarAtor', id], {relativeTo: this.route});
   }
   excluirAtor(): void {
     this.dialog.open(ExcluirAtorComponent, {
