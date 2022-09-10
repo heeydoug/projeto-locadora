@@ -15,7 +15,7 @@ export class CrudDiretorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  irParaCriarDiretor(): void{
+  adicionarDiretor(): void{
     this.router.navigate(['/diretor/criarDiretor']);
   }
 }

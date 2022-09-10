@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import {MatDialogRef} from "@angular/material/dialog";
+import {Component, Inject, OnInit} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {Ator} from "../models/ator";
+import {AtorService} from "../services/ator.service";
+import {first} from "rxjs";
+
 
 @Component({
   selector: 'app-excluir-ator',
@@ -8,14 +12,25 @@ import {MatDialogRef} from "@angular/material/dialog";
 })
 export class ExcluirAtorComponent implements OnInit {
 
+  public ator: Ator;
+
   constructor(
-    public dialogRef: MatDialogRef<ExcluirAtorComponent>
-  ) { }
+    public dialogRef: MatDialogRef<ExcluirAtorComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: Ator,
+    private service: AtorService,
+
+
+  ) {
+    this.ator = data;
+  }
 
   ngOnInit(): void {
+
   }
 
   excluirAtor() {
+    console.log(this.ator)
+    this.service.deletar(this.ator._id).pipe(first()).subscribe()
     this.dialogRef.close(true);
   }
 

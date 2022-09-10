@@ -20,6 +20,7 @@ export class CriarAtorComponent implements OnInit {
     private service: AtorService,
     private snackBar: MatSnackBar,
     private location: Location) {
+
     this.form = this.formBuilder.group({
       nome: [null]
     });

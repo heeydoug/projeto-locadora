@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Ator} from "../models/ator";
-import {first, take, tap} from "rxjs";
+import {first, tap} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -20,13 +20,23 @@ export class AtorService {
       );
   }
 
-  save(record: Ator){
+  save(record: Partial<Ator>){
     return this.httpClient.post<Ator>(this.API, record).pipe(first());
   }
 
-  loadByID(id: any){
-    return this.httpClient.get(`${this.API}/${id}`).pipe(take(1));
-
+  loadByID(id: string){
+    return this.httpClient.get<Ator>(`${this.API}/${id}`);
   }
 
+  editar(record: Partial<Ator>){
+    return this.httpClient.put<Ator>(`${this.API}/${record._id}`, record).pipe(first());
+  }
+
+  deletar(id: string){
+    return this.httpClient.delete<string>(this.API, {
+      params: {
+        id: id
+      }
+    } );
+  }
 }

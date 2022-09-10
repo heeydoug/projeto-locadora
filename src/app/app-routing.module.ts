@@ -13,6 +13,9 @@ import {ExcluirClasseComponent} from "./components/classe/excluir-classe/excluir
 import {EditarClasseComponent} from "./components/classe/editar-classe/editar-classe.component";
 import {EditarDiretorComponent} from "./components/diretor/editar-diretor/editar-diretor.component";
 import {ExcluirDiretorComponent} from "./components/diretor/excluir-diretor/excluir-diretor.component";
+import {AtorResolver} from "./components/ator/guards/ator.resolver";
+import {DiretorResolver} from "./components/diretor/guards/diretor.resolver";
+import {ClasseResolver} from "./components/classe/guards/classe.resolver";
 
 const routes: Routes = [
   {
@@ -27,12 +30,14 @@ const routes: Routes = [
 
   {
     path: 'ator/criarAtor',
-    component: CriarAtorComponent
+    component: CriarAtorComponent,
+    resolve: { ator: AtorResolver }
   },
 
   {
     path: 'ator/editarAtor/:id',
-    component: EditarAtorComponent
+    component: EditarAtorComponent,
+    resolve: { ator: AtorResolver }
   },
 
   {
@@ -47,12 +52,14 @@ const routes: Routes = [
 
   {
     path: 'classe/criarClasse',
-    component: CriarClasseComponent
+    component: CriarClasseComponent,
+    resolve: { classe: ClasseResolver }
   },
 
   {
-    path: 'classe/editarClasse',
-    component: EditarClasseComponent
+    path: 'classe/editarClasse/:id',
+    component: EditarClasseComponent,
+    resolve: { classe: ClasseResolver }
   },
 
   {
@@ -67,12 +74,14 @@ const routes: Routes = [
 
   {
     path: 'diretor/criarDiretor',
-    component: CriarDiretorComponent
+    component: CriarDiretorComponent,
+    resolve: { diretor: DiretorResolver }
   },
 
   {
-    path: 'diretor/editarDiretor',
-    component: EditarDiretorComponent
+    path: 'diretor/editarDiretor/:id',
+    component: EditarDiretorComponent,
+    resolve: { diretor: DiretorResolver }
   },
 
   {

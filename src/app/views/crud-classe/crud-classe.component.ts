@@ -15,7 +15,7 @@ export class CrudClasseComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  irParaCriarClasse(): void{
+  adicionarClasse(): void{
     this.router.navigate(['/classe/criarClasse']);
   }
 }

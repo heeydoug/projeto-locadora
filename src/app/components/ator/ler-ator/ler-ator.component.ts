@@ -27,15 +27,19 @@ export class LerAtorComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    //Atualizar quando é feito alguma alteração como editar ou excluir (i think
+    this.dialog.afterAllClosed.subscribe(_ => {
+      this.atores = this.atorService.list();
+    });
   }
 
-  editarAtor(id: any){
-    this.router.navigate(['/ator/editarAtor', id], {relativeTo: this.route});
+  editarAtor(ator: Ator ){
+    this.router.navigate(['editarAtor', ator._id], {relativeTo: this.route});
   }
-  excluirAtor(): void {
+  excluirAtor(row: Ator): void {
     this.dialog.open(ExcluirAtorComponent, {
       width: '400px',
+      data: row
     });
   }
 }

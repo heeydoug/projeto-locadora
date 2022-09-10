@@ -19,12 +19,12 @@
       <td mat-cell *matCellDef="let row">
 
         <!-- Icone de Excluir na tabela -->
-        <button mat-icon-button (click)="excluirAtor()" aria-label="Excluir Ator">
+        <button mat-icon-button (click)="excluirAtor(row)" aria-label="Excluir Ator">
           <i class="material-icons icone-excluir"> delete </i>
         </button>
 
         <!-- Icone de Editar na tabela -->
-        <button mat-icon-button (click)="editarAtor( row._id )" aria-label="Editar Ator">
+        <button mat-icon-button (click)="editarAtor(row)" aria-label="Editar Ator">
           <i class="material-icons icone-editar"> edit </i>
         </button>
 
