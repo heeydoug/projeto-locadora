@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {AtorService} from "../../ator/services/ator.service";
 import {NonNullableFormBuilder} from "@angular/forms";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {Location} from "@angular/common";
 import {ClasseService} from "../services/classe.service";
-import {Ator} from "../../ator/models/ator";
 import {Classe} from "../models/classe";
 
 @Component({

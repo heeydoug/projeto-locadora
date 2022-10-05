@@ -21,7 +21,7 @@ export class DiretorService {
       );
   }
 
-  save(record: Partial<Ator>){
+  save(record: Partial<Diretor>){
     return this.httpClient.post<Diretor>(this.API, record).pipe(first());
   }
 

@@ -1,0 +1,68 @@
+<div class="container-principal">
+  <mat-card class="card mat-elevation-z4">
+    <mat-card-title>Editar Título</mat-card-title>
+    <form [formGroup]="form">
+
+      <mat-form-field>
+        <input matInput placeholder="Nome" formControlName="nome" name="nome">
+      </mat-form-field>
+
+      <!-- Data de Devolução -->
+      <mat-form-field appearance="fill">
+        <mat-label>Ano</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="ano">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Sinopse"
+          formControlName="sinopse"
+          name="sinopse"
+          type="text">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Categoria"
+          formControlName="categoria"
+          name="categoria"
+          type="text">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select formControlName="diretor" name="diretor" placeholder="Diretor">
+          <mat-option *ngFor="let diretor of diretores" [value]="diretor">
+            {{ diretor.nome }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select formControlName="classe" name="classe" placeholder="Classe">
+          <mat-option *ngFor="let classe of classes" [value]="classe">
+            {{ classe.nome }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field >
+        <mat-select multiple formControlName="atores" placeholder="Atores" name="atores" id="atores">
+          <mat-option *ngFor="let ator of atores" [value]="ator">{{ator.nome}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </form>
+
+    <button class="salvar" mat-raised-button (click)="editarTitulo()">
+      Salvar
+    </button>
+
+    <button class="cancelar" mat-raised-button (click)="cancelar()">
+      Cancelar
+    </button>
+  </mat-card>
+</div>

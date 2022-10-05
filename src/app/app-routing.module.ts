@@ -16,6 +16,11 @@ import {ExcluirDiretorComponent} from "./components/diretor/excluir-diretor/excl
 import {AtorResolver} from "./components/ator/guards/ator.resolver";
 import {DiretorResolver} from "./components/diretor/guards/diretor.resolver";
 import {ClasseResolver} from "./components/classe/guards/classe.resolver";
+import {CrudTituloComponent} from "./views/crud-titulo/crud-titulo.component";
+import {CriarTituloComponent} from "./components/titulo/criar-titulo/criar-titulo.component";
+import {EditarTituloComponent} from "./components/titulo/editar-titulo/editar-titulo.component";
+import {ExcluirTituloComponent} from "./components/titulo/excluir-titulo/excluir-titulo.component";
+import {TituloResolver} from "./components/titulo/guards/titulo.resolver";
 
 const routes: Routes = [
   {
@@ -87,6 +92,28 @@ const routes: Routes = [
   {
     path: 'diretor/excluirDiretor',
     component: ExcluirDiretorComponent
+  },
+
+  {
+    path: 'titulo',
+    component: CrudTituloComponent
+  },
+
+  {
+    path: 'titulo/criarTitulo',
+    component: CriarTituloComponent,
+    resolve: { titulo: TituloResolver }
+  },
+
+  {
+    path: 'titulo/editarTitulo/:id',
+    component: EditarTituloComponent,
+    resolve: { titulo: TituloResolver }
+  },
+
+  {
+    path: 'diretor/excluirTitulo',
+    component: ExcluirTituloComponent
   },
 
 ];

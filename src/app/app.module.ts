@@ -24,7 +24,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { CriarClasseComponent } from './components/classe/criar-classe/criar-classe.component';
 import { CriarDiretorComponent } from './components/diretor/criar-diretor/criar-diretor.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
-import { MatNativeDateModule } from '@angular/material/core';
+import {MatNativeDateModule, MatOptionModule} from '@angular/material/core';
 import { LerAtorComponent } from './components/ator/ler-ator/ler-ator.component';
 import { ExcluirAtorComponent } from './components/ator/excluir-ator/excluir-ator.component';
 import { EditarAtorComponent } from './components/ator/editar-ator/editar-ator.component';
@@ -40,6 +40,16 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import { CrudTituloComponent } from './views/crud-titulo/crud-titulo.component';
+import { CriarTituloComponent } from './components/titulo/criar-titulo/criar-titulo.component';
+import { EditarTituloComponent } from './components/titulo/editar-titulo/editar-titulo.component';
+import { ExcluirTituloComponent } from './components/titulo/excluir-titulo/excluir-titulo.component';
+import { LerTituloComponent } from './components/titulo/ler-titulo/ler-titulo.component';
+import {MatSelectModule} from "@angular/material/select";
+import { CriarItemComponent } from './components/item/criar-item/criar-item.component';
+import { EditarItemComponent } from './components/item/editar-item/editar-item.component';
+import { ExcluirItemComponent } from './components/item/excluir-item/excluir-item.component';
+import { LerItemComponent } from './components/item/ler-item/ler-item.component';
 
 
 @NgModule({
@@ -62,31 +72,42 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     LerClasseComponent,
     EditarDiretorComponent,
     ExcluirDiretorComponent,
-    LerDiretorComponent
+    LerDiretorComponent,
+    CrudTituloComponent,
+    CriarTituloComponent,
+    EditarTituloComponent,
+    ExcluirTituloComponent,
+    LerTituloComponent,
+    CriarItemComponent,
+    EditarItemComponent,
+    ExcluirItemComponent,
+    LerItemComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatButtonModule,
-        MatSidenavModule,
-        MatListModule,
-        MatCardModule,
-        MatFormFieldModule,
-        MatInputModule,
-        FormsModule,
-        MatDatepickerModule,
-        MatNativeDateModule,
-        MatSortModule,
-        MatTableModule,
-        HttpClientModule,
-        MatProgressSpinnerModule,
-        MatDialogModule,
-        ReactiveFormsModule,
-        MatSnackBarModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSortModule,
+    MatTableModule,
+    HttpClientModule,
+    MatProgressSpinnerModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    MatOptionModule,
+    MatSelectModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
