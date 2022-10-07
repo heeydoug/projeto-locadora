@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExcluirItemComponent } from './excluir-item.component';
+import { CrudSocioComponent } from './crud-socio.component';
 
-describe('ExcluirItemComponent', () => {
-  let component: ExcluirItemComponent;
-  let fixture: ComponentFixture<ExcluirItemComponent>;
+describe('CrudSocioComponent', () => {
+  let component: CrudSocioComponent;
+  let fixture: ComponentFixture<CrudSocioComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExcluirItemComponent ]
+      declarations: [ CrudSocioComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ExcluirItemComponent);
+    fixture = TestBed.createComponent(CrudSocioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
