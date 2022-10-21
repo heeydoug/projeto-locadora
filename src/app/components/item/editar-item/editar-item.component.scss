@@ -1,0 +1,28 @@
+.container-principal{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  margin-top: 30px;
+  width: 60%;
+}
+
+.salvar {
+  margin: 1%;
+  background-color: #01a86c;
+}
+
+.cancelar {
+  margin: 1%;
+  background-color: indianred;
+}
+
+

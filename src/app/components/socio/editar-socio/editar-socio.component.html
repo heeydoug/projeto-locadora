@@ -1,0 +1,77 @@
+<div class="container-principal">
+  <mat-card class="card mat-elevation-z4">
+    <mat-card-title>Editar Sócio</mat-card-title>
+    <form [formGroup]="form">
+
+      <mat-form-field>
+        <input matInput placeholder="Número de Inscrição"
+               formControlName="numeroInscricao" name="numeroInscricao"
+               type="number">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput
+               placeholder="Nome"
+               formControlName="nome" name="nome">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput
+               placeholder="CPF"
+               formControlName="cpf" name="cpf">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Data de Nascimento</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dataNascimento">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput
+               placeholder="Endereço"
+               formControlName="endereco" name="endereco">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput
+               placeholder="Telefone"
+               formControlName="telefone" name="telefone">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Sexo</mat-label>
+        <mat-select formControlName="sexo">
+          <mat-option value="Masculino">Masculino</mat-option>
+          <mat-option value="Feminino">Feminino</mat-option>
+          <mat-option value="Outro">Outro</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field >
+        <mat-select multiple formControlName="dependentes" placeholder="Dependentes" name="dependentes" id="dependentes">
+          <mat-option *ngFor="let dependente of dependentes" [value]="dependente" >{{dependente.nome}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+      <mat-form-field appearance="fill">
+        <mat-label>Está ativo?</mat-label>
+        <mat-select formControlName="estahAtivo">
+          <mat-option value="Sim">Sim</mat-option>
+          <mat-option value="Nao">Não</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </form>
+
+    <button class="salvar" mat-raised-button (click)="editarSocio()">
+      Salvar Edição
+    </button>
+
+    <button class="cancelar" mat-raised-button (click)="cancelar()">
+      Cancelar
+    </button>
+  </mat-card>
+</div>

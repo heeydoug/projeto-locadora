@@ -1,7 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {Classe} from "../../classe/models/classe";
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import {ClasseService} from "../../classe/services/classe.service";
 import {first} from "rxjs";
 import {Titulo} from "../models/titulo";
 import {TituloService} from "../services/titulo.service";

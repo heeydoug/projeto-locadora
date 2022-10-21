@@ -16,9 +16,7 @@ export class LerTituloComponent implements OnInit {
 
 
   titulos: Observable<Titulo[]>
-  // titulos: Titulo[] = [
-  //   { _id: '1', nome: 'Titulo Teste', ano:'19/05/2005', sinopse: '', atores: any, diretor: any, }
-  // ]
+
   displayedColumns = ['id', 'nome', 'ano', 'sinopse', 'categoria', 'diretor', 'classe', 'ator', 'acoes'];
 
   constructor(

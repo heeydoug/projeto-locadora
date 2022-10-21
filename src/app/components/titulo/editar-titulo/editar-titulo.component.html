@@ -66,3 +66,87 @@
     </button>
   </mat-card>
 </div>
+
+
+
+
+<!-- TESTE FEITO QUANDO TENTEI COM BRENO MAS POR ALGUM MOTIVO NÃO FUNCIONAVA DE JEITO NENHUM-->
+<!-- <div class="container-principal">
+  <mat-card class="card mat-elevation-z4">
+    <mat-card-title>Editar Título</mat-card-title>
+    <form [formGroup]="form">
+
+      <mat-form-field>
+        <input matInput placeholder="Nome" formControlName="nome" name="nome">
+      </mat-form-field>
+
+
+      <mat-form-field appearance="fill">
+        <mat-label>Ano</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="ano">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Sinopse"
+          formControlName="sinopse"
+          name="sinopse"
+          type="text">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Categoria"
+          formControlName="categoria"
+          name="categoria"
+          type="text">
+      </mat-form-field>
+
+      <ng-template #loading>
+        <span> Carregando </span>
+
+      </ng-template>
+
+      <ng-container *ngIf="$diretor | async as diretorCarregado ; else loading">
+
+        <mat-form-field>
+          <mat-select formControlName="diretor" placeholder="Diretor" [compareWith]="compararDiretor" [value]="dirModel">
+            <mat-option *ngFor="let diretorForm of diretorCarregado" [value]="diretorForm">
+              {{ diretorForm.nome }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </ng-container>
+
+        <mat-form-field>
+          <mat-select formControlName="classe" placeholder="Classe">
+            <mat-option *ngFor="let classeForm of classesArray" [value]="classeForm">
+              {{ classeForm.nome }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field >
+          <mat-select multiple formControlName="atores" placeholder="Atores" id="atores">
+            <mat-option *ngFor="let atorForm of atoresArray" [value]="atorForm">{{atorForm.nome}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+    </form>
+
+    <button class="salvar" mat-raised-button (click)="editarTitulo()">
+      Salvar
+    </button>
+
+    <button class="cancelar" mat-raised-button (click)="cancelar()">
+      Cancelar
+    </button>
+  </mat-card>
+</div> -->
+
+

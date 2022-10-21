@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Titulo} from "../models/titulo";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {Router} from "@angular/router";
 import {ClasseService} from "../../classe/services/classe.service";

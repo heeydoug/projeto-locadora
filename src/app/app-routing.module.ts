@@ -21,6 +21,21 @@ import {CriarTituloComponent} from "./components/titulo/criar-titulo/criar-titul
 import {EditarTituloComponent} from "./components/titulo/editar-titulo/editar-titulo.component";
 import {ExcluirTituloComponent} from "./components/titulo/excluir-titulo/excluir-titulo.component";
 import {TituloResolver} from "./components/titulo/guards/titulo.resolver";
+import {CrudItemComponent} from "./views/crud-item/crud-item.component";
+import {CriarItemComponent} from "./components/item/criar-item/criar-item.component";
+import {EditarItemComponent} from "./components/item/editar-item/editar-item.component";
+import {ExcluirItemComponent} from "./components/item/excluir-item/excluir-item.component";
+import {ItemResolver} from "./components/item/guards/item.resolver";
+import {CrudClienteComponent} from "./views/crud-cliente/crud-cliente.component";
+import {ClienteResolver} from "./components/cliente/guards/cliente.resolver";
+import {CriarClienteComponent} from "./components/cliente/criar-cliente/criar-cliente.component";
+import {ExcluirClienteComponent} from "./components/cliente/excluir-cliente/excluir-cliente.component";
+import {EditarClienteComponent} from "./components/cliente/editar-cliente/editar-cliente.component";
+import {CrudSocioComponent} from "./views/crud-socio/crud-socio.component";
+import {CriarSocioComponent} from "./components/socio/criar-socio/criar-socio.component";
+import {EditarSocioComponent} from "./components/socio/editar-socio/editar-socio.component";
+import {SocioResolver} from "./components/socio/guards/socio.resolver";
+import {ExcluirSocioComponent} from "./components/socio/excluir-socio/excluir-socio.component";
 
 const routes: Routes = [
   {
@@ -114,6 +129,72 @@ const routes: Routes = [
   {
     path: 'diretor/excluirTitulo',
     component: ExcluirTituloComponent
+  },
+
+  {
+    path: 'item',
+    component: CrudItemComponent
+  },
+
+  {
+    path: 'item/criarItem',
+    component: CriarItemComponent,
+    resolve: {item: ItemResolver}
+  },
+
+  {
+    path: 'item/editarItem/:id',
+    component: EditarItemComponent,
+    resolve: {item: ItemResolver}
+  },
+
+  {
+    path: 'item/excluirItem',
+    component: ExcluirItemComponent
+  },
+
+  {
+    path: 'cliente',
+    component: CrudClienteComponent
+  },
+
+  {
+    path: 'cliente/criarCliente',
+    component: CriarClienteComponent,
+    resolve: {cliente: ClienteResolver}
+  },
+
+  {
+    path: 'cliente/editarCliente/:id',
+    component: EditarClienteComponent,
+    resolve: {cliente: ClienteResolver}
+  },
+
+  {
+    path: 'cliente/excluirCliente',
+    component: ExcluirClienteComponent
+  },
+
+  {
+    path: 'socio',
+    component: CrudSocioComponent
+  },
+
+  {
+    path: 'socio/criarSocio',
+    component: CriarSocioComponent,
+    resolve: {socio: SocioResolver}
+  },
+
+  {
+    path: 'socio/editarSocio/:id',
+    component: EditarSocioComponent,
+    resolve: {socio: SocioResolver}
+  },
+
+  {
+    path: 'socio/excluirSocio',
+    component: ExcluirSocioComponent
   },
 
 ];

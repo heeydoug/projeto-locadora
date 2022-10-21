@@ -7,7 +7,6 @@ import {
 import { Observable, of } from 'rxjs';
 import {TituloService} from "../services/titulo.service";
 import {Titulo} from "../models/titulo";
-import {Diretor} from "../../diretor/models/diretor";
 
 @Injectable({
   providedIn: 'root'
@@ -29,8 +28,8 @@ export class TituloResolver implements Resolve<Titulo> {
       sinopse: '',
       categoria: '',
       atores: [],
-      diretor: undefined,
-      classe: undefined
+      diretor: { _id: '', nome: '' },
+      classe: { _id: '', nome: '', data: '', valor: 0 }
 
     });
   }

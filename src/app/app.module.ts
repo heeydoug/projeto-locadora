@@ -50,6 +50,17 @@ import { CriarItemComponent } from './components/item/criar-item/criar-item.comp
 import { EditarItemComponent } from './components/item/editar-item/editar-item.component';
 import { ExcluirItemComponent } from './components/item/excluir-item/excluir-item.component';
 import { LerItemComponent } from './components/item/ler-item/ler-item.component';
+import { CrudItemComponent } from './views/crud-item/crud-item.component';
+import { CriarClienteComponent } from './components/cliente/criar-cliente/criar-cliente.component';
+import { EditarClienteComponent } from './components/cliente/editar-cliente/editar-cliente.component';
+import { LerClienteComponent } from './components/cliente/ler-cliente/ler-cliente.component';
+import { ExcluirClienteComponent } from './components/cliente/excluir-cliente/excluir-cliente.component';
+import { CriarSocioComponent } from './components/socio/criar-socio/criar-socio.component';
+import { EditarSocioComponent } from './components/socio/editar-socio/editar-socio.component';
+import { LerSocioComponent } from './components/socio/ler-socio/ler-socio.component';
+import { ExcluirSocioComponent } from './components/socio/excluir-socio/excluir-socio.component';
+import { CrudClienteComponent } from './views/crud-cliente/crud-cliente.component';
+import { CrudSocioComponent } from './views/crud-socio/crud-socio.component';
 
 
 @NgModule({
@@ -81,7 +92,18 @@ import { LerItemComponent } from './components/item/ler-item/ler-item.component'
     CriarItemComponent,
     EditarItemComponent,
     ExcluirItemComponent,
-    LerItemComponent
+    LerItemComponent,
+    CrudItemComponent,
+    CriarClienteComponent,
+    EditarClienteComponent,
+    LerClienteComponent,
+    ExcluirClienteComponent,
+    CriarSocioComponent,
+    EditarSocioComponent,
+    LerSocioComponent,
+    ExcluirSocioComponent,
+    CrudClienteComponent,
+    CrudSocioComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,7 @@ import {DiretorService} from "../services/diretor.service";
 export class LerDiretorComponent implements OnInit {
 
   diretores: Observable<Diretor[]>;
-  displayedColumns = ['id', 'nome', 'ano', 'sinopse', 'categoria', 'diretor', 'classe', 'atores','acoes'];
+  displayedColumns = ['id', 'nome', 'acoes'];
 
   constructor(
     private dialog: MatDialog,
