@@ -5,7 +5,6 @@ import {Titulo} from "../models/titulo";
 import {Observable} from "rxjs";
 import {TituloService} from "../services/titulo.service";
 import {ExcluirTituloComponent} from "../excluir-titulo/excluir-titulo.component";
-import {AtorService} from "../../ator/services/ator.service";
 
 @Component({
   selector: 'app-ler-titulo',
@@ -14,8 +13,7 @@ import {AtorService} from "../../ator/services/ator.service";
 })
 export class LerTituloComponent implements OnInit {
 
-
-  titulos: Observable<Titulo[]>
+  titulos: Observable<Titulo[]>;
 
   displayedColumns = ['id', 'nome', 'ano', 'sinopse', 'categoria', 'diretor', 'classe', 'ator', 'acoes'];
 

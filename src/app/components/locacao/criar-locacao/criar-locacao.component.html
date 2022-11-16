@@ -1,0 +1,68 @@
+<div class="container-principal">
+  <mat-card class="card mat-elevation-z4">
+    <mat-card-title>Cadastrar Nova Locação</mat-card-title>
+    <form [formGroup]="form">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Data de Locação</mat-label>
+        <input matInput [matDatepicker]="picker"
+               formControlName="dtLocacao" name="dtLocacao">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+
+      <mat-form-field appearance="fill">
+        <mat-label>Data de Devolução Prevista</mat-label>
+        <input matInput [matDatepicker]="picker2"
+               formControlName="dtDevolucaoPrevista" name="dtDevolucaoPrevista">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Data de Devolução Efetiva</mat-label>
+        <input matInput [matDatepicker]="picker3"
+               formControlName="dtDevolucaoEfetiva" name="dtDevolucaoEfetiva">
+        <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+        <mat-datepicker #picker3></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Valor Cobrado"
+               formControlName="valorCobrado" name="valorCobrado" type="number">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Multa Cobrada"
+               formControlName="multaCobrada" name="multaCobrada" type="number">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Item</mat-label>
+        <mat-select formControlName="item" name="item">
+          <mat-option *ngFor="let item of itens" [value]="item">
+            {{item.tipoItem}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Cliente</mat-label>
+        <mat-select formControlName="cliente" name="cliente">
+          <mat-option *ngFor="let cliente of clientes" [value]="cliente">
+            {{cliente.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </form>
+    <button class="salvar" mat-raised-button (click)="criarLocacao()">
+      Salvar
+    </button>
+
+    <button class="cancelar" mat-raised-button (click)="cancelar()">
+      Cancelar
+    </button>
+  </mat-card>
+</div>

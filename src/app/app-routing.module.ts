@@ -36,6 +36,11 @@ import {CriarSocioComponent} from "./components/socio/criar-socio/criar-socio.co
 import {EditarSocioComponent} from "./components/socio/editar-socio/editar-socio.component";
 import {SocioResolver} from "./components/socio/guards/socio.resolver";
 import {ExcluirSocioComponent} from "./components/socio/excluir-socio/excluir-socio.component";
+import {CriarLocacaoComponent} from "./components/locacao/criar-locacao/criar-locacao.component";
+import {CrudLocacaoComponent} from "./views/crud-locacao/crud-locacao.component";
+import {LocacaoResolver} from "./components/locacao/guards/locacao.resolver";
+import {EditarLocacaoComponent} from "./components/locacao/editar-locacao/editar-locacao.component";
+import {ExcluirLocacaoComponent} from "./components/locacao/excluir-locacao/excluir-locacao.component";
 
 const routes: Routes = [
   {
@@ -195,6 +200,27 @@ const routes: Routes = [
   {
     path: 'socio/excluirSocio',
     component: ExcluirSocioComponent
+  },
+
+  {
+    path: 'locacao',
+    component: CrudLocacaoComponent
+  },
+
+  {
+    path: 'locacao/criarLocacao',
+    component: CriarLocacaoComponent,
+    resolve: {locacao: LocacaoResolver}
+  },
+  {
+    path: 'locacao/editarLocacao/:id',
+    component: EditarLocacaoComponent,
+    resolve: {locacao: LocacaoResolver}
+  },
+
+  {
+    path: 'locacao/excluirLocacao',
+    component: ExcluirLocacaoComponent
   },
 
 ];

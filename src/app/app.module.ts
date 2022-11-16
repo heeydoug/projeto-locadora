@@ -61,6 +61,11 @@ import { LerSocioComponent } from './components/socio/ler-socio/ler-socio.compon
 import { ExcluirSocioComponent } from './components/socio/excluir-socio/excluir-socio.component';
 import { CrudClienteComponent } from './views/crud-cliente/crud-cliente.component';
 import { CrudSocioComponent } from './views/crud-socio/crud-socio.component';
+import { CriarLocacaoComponent } from './components/locacao/criar-locacao/criar-locacao.component';
+import { EditarLocacaoComponent } from './components/locacao/editar-locacao/editar-locacao.component';
+import { ExcluirLocacaoComponent } from './components/locacao/excluir-locacao/excluir-locacao.component';
+import { LerLocacaoComponent } from './components/locacao/ler-locacao/ler-locacao.component';
+import { CrudLocacaoComponent } from './views/crud-locacao/crud-locacao.component';
 
 
 @NgModule({
@@ -103,7 +108,12 @@ import { CrudSocioComponent } from './views/crud-socio/crud-socio.component';
     LerSocioComponent,
     ExcluirSocioComponent,
     CrudClienteComponent,
-    CrudSocioComponent
+    CrudSocioComponent,
+    CriarLocacaoComponent,
+    EditarLocacaoComponent,
+    ExcluirLocacaoComponent,
+    LerLocacaoComponent,
+    CrudLocacaoComponent
   ],
   imports: [
     BrowserModule,

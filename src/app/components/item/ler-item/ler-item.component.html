@@ -13,7 +13,7 @@
 
     <ng-container matColumnDef="dtaquisicao">
       <th mat-header-cell *matHeaderCellDef>Data de aquisição</th>
-      <td mat-cell *matCellDef="let row">{{row.dtaquisicao | date:'YYYY'}}</td>
+      <td mat-cell *matCellDef="let row">{{row.dtaquisicao | date:'dd/MM/YYYY'}}</td>
     </ng-container>
 
     <ng-container matColumnDef="tipoItem">
