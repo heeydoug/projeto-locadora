@@ -66,6 +66,8 @@ import { EditarLocacaoComponent } from './components/locacao/editar-locacao/edit
 import { ExcluirLocacaoComponent } from './components/locacao/excluir-locacao/excluir-locacao.component';
 import { LerLocacaoComponent } from './components/locacao/ler-locacao/ler-locacao.component';
 import { CrudLocacaoComponent } from './views/crud-locacao/crud-locacao.component';
+import { LoginComponent } from './views/login/login.component';
+import {AuthService} from "./views/login/auth.service";
 
 
 @NgModule({
@@ -113,7 +115,8 @@ import { CrudLocacaoComponent } from './views/crud-locacao/crud-locacao.componen
     EditarLocacaoComponent,
     ExcluirLocacaoComponent,
     LerLocacaoComponent,
-    CrudLocacaoComponent
+    CrudLocacaoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -140,7 +143,7 @@ import { CrudLocacaoComponent } from './views/crud-locacao/crud-locacao.componen
     MatOptionModule,
     MatSelectModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

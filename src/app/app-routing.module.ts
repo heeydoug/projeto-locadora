@@ -41,6 +41,7 @@ import {CrudLocacaoComponent} from "./views/crud-locacao/crud-locacao.component"
 import {LocacaoResolver} from "./components/locacao/guards/locacao.resolver";
 import {EditarLocacaoComponent} from "./components/locacao/editar-locacao/editar-locacao.component";
 import {ExcluirLocacaoComponent} from "./components/locacao/excluir-locacao/excluir-locacao.component";
+import {LoginComponent} from "./views/login/login.component";
 
 const routes: Routes = [
   {
@@ -221,6 +222,11 @@ const routes: Routes = [
   {
     path: 'locacao/excluirLocacao',
     component: ExcluirLocacaoComponent
+  },
+
+  {
+    path: 'login',
+    component: LoginComponent
   },
 
 ];

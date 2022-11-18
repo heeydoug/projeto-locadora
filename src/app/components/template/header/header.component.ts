@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {AuthService} from "../../../views/login/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,23 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  mostrarMenu: boolean = false;
 
-  ngOnInit(): void {
+  constructor(
+    private authService: AuthService,
+    private router: Router) {
+
   }
 
+  ngOnInit(){
+    this.authService.mostrarMenuNavBarEmitter.subscribe(
+      mostrar => this.mostrarMenu = mostrar
+    );
+
+  }
+
+  login() {
+    this.mostrarMenu = false;
+    this.router.navigate(['/login']);
+  }
 }
